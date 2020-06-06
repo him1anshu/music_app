@@ -1,0 +1,23 @@
+<p>
+  <strong class="m-0 ml-4 my-2">Name:</strong>
+  <%= @album.name %>
+</p>
+
+<p>
+  <strong class="m-0 ml-4 my-2">Description:</strong>
+  <%= @album.description %>
+</p>
+
+<% if @album.tracks.any? %>
+  <hr>
+  <h2 class="m-0 ml-4 my-2">Tracks in <%= @album.name %> : </h2>
+  <%= render @album.tracks %>
+<% end %>
+  
+<hr>
+
+<h2 class="m-0 ml-4 my-2">Add a track : </h2>
+<%= render 'tracks/form', track: @album.tracks.build  %>
+
+<%= link_to 'Edit', edit_album_path(@album), :class => "btn btn-primary my-4 ml-4" %>
+<%= link_to 'Back', albums_path, :class => "btn btn-dark my-4" %>

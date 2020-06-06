@@ -1,0 +1,9 @@
+<!-- <p><%= track.id %> | <%= link_to track.title, album_track_path(@album, track) %></p>
+
+<p>Edit this track : </p> -->
+
+<%= render 'tracks/form', track: track %>
+
+<p><%= link_to "Delete Track", album_track_path(@album, track), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+
+<hr>

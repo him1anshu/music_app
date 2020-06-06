@@ -1,0 +1,48 @@
+<%= render 'tracks/header'%>
+
+<section class="container-fluid">
+
+<div class="card m-0 ml-4 mt-4 mb-5 text-center" style="width: 10rem; height: 10rem;">
+  <img class="card-img-top img-thumbnail" src="<%= url_for(@album.thumbnail) %>" style="width: 10rem; height: 10rem;">
+  <p class="m-0 mt-1"><%= @album.name %></p>
+  <p><%= @album.description %></p>
+</div>
+
+<button id="play-playlist" class="btn btn-danger m-0 mt-3 ml-5">Play All</button>
+
+<div class="container-fluid" style="margin-top: 60px;">
+
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @album.tracks.each do |track| %>
+      <tr>
+        <td><%= track.title %></td>
+        <td><%= track.description %></td>
+        <td class="p-0 pt-1"><%= link_to "Play", url_for(track.song), class: "btn btn-dark m-0 play" %></td>
+        <td class="p-0 pt-1"><%= link_to "Download", url_for(track.song), class: "btn btn-info m-0" %></td>
+        
+      </tr>
+
+      <% @play_all << url_for(track.song) %>
+
+    <%end%>
+  </tbody>
+</table>
+</div>
+</section>
+<%= render 'tracks/footer'%>
+
+<!-- code for loading playlist from database and changing tracks -->
+
+<script type="text/javascript">
+var files = <%= @play_all.inspect.html_safe %>;
+</script>
+</div>

@@ -1,0 +1,49 @@
+<%= form_with(model: [@album, track], local: true) do |form| %>
+<% if track.errors.any? %>
+<div id="error_explanation">
+<h2><%= pluralize(track.errors.count, "error") %> prohibited this track from being saved:</h2>
+
+<ul>
+<% track.errors.full_messages.each do |message| %>
+<li><%= message %></li>
+<% end %>
+</ul>
+</div>
+<% end %>
+
+<div id="login" class="container login-container m-0 ml-4">
+<div class="row">
+
+<div class="col-md-6 login-form-1 bg-light">
+<form>
+
+<div class="form-group field">
+<%= form.label :title %>
+<%= form.text_field :title, class: "form-control" %>
+</div>
+
+<div class="form-group field">
+<%= form.label :song %>
+<%= form.file_field :song, class: "form-control" %>
+</div>
+
+<div class="form-group field">
+<%= form.label :thumbnail %>
+<%= form.file_field :thumbnail, class: "form-control" %>
+</div>
+
+<div class="form-group field">
+<%= form.label :description %>
+<%= form.text_area :description, class: "form-control" %>
+</div>
+
+<div class="form-group actions">
+<%= form.submit "Update/Add", class: "btnSubmit" %>
+</div>
+
+</form>
+</div>
+</div>
+</div>
+
+<% end %>

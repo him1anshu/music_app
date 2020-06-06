@@ -1,0 +1,18 @@
+<% if current_user %>
+
+  <%= render 'tracks/home', track: @tracks %><!-- 
+  <%= form_tag root_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+  <% end %> -->
+  
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+<% else %>
+  
+     <%= render "login" %>
+     
+<% end %>
+
+

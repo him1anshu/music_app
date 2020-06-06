@@ -1,0 +1,48 @@
+<%= render 'tracks/header'%>
+
+<section class="container-fluid">
+
+<div class="container-fluid">
+
+<h4 class=" m-0 ml-4 mt-4">TRACKS</h4>
+
+<% @tracks.each do |track| %>
+
+<div class="card float-left mr-5 mb-5 mt-2 text-center" style="width: 10rem; height: 10rem;">
+
+<a href="<%= url_for(track.song) %>" class="nonstyle play"><img class="card-img-top img-thumbnail" src="<%= url_for(track.thumbnail) %>" style="width: 10rem; height: 10rem;"></a>
+<p class="mt-1"><%= track.title %></p>
+</div>
+<% end %>
+
+</div>
+
+<div class="container-fluid album">
+
+<div class="container-fluid">
+
+<h4 class=" m-0 ml-4 mt-4 float-left">ALBUMS</h4>
+<% if current_user.admin? %>
+<%= link_to "Edit", albums_path , class: "btn btn-primary float-right m-0 mt-4 mr-5" %>
+<%end%>
+
+</div>
+
+<div class="container-fluid album">
+
+<% @albums.each do |album| %>
+
+<div class="card float-left mr-5 mb-5 mt-2 text-center" style="width: 10rem; height: 10rem;">
+<a href="<%=album_display_path(album.id)%>" class="nonstyle"><img class="card-img-top img-thumbnail" src="<%= url_for(album.thumbnail) %>" style="width: 10rem; height: 10rem;"></a>
+<p class="mt-1"><%= album.name %></p>
+</div>
+
+<%end%>
+
+</div>
+
+</div>
+
+</section>
+
+<%= render 'tracks/footer'%>

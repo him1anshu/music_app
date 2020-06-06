@@ -1,0 +1,117 @@
+// Place all the styles related to the tracks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+* {
+	font-family: 'proximanova-semibold-webfont';
+	color: rgba(0,0,0,0.75);
+}
+
+body {
+  margin: 0;
+}
+
+a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: #fff;
+}
+
+#nav-bar {
+  background-color: #1d2b36;
+}
+
+.search-field {
+  background-color: #1d2b36;
+  border: none;
+  border-bottom: 1px solid #fff;
+  border-radius: 0;
+}
+
+.search-button {
+  background-color: #1d2b36;
+  border: none;
+}
+
+.album {
+  clear: both;
+}
+
+#music {
+  clear: both;
+}
+
+#music-player {
+  height:55px;
+  width: 100%;
+}
+
+#seek-bar {
+  cursor: pointer;
+  height: 5px; 
+  border-radius: 0;
+}
+
+#music-player i, input{
+  cursor: pointer;
+}
+
+/*.left {
+  height: 100vh;
+  background-color: grey;
+}
+
+.right {
+  
+  height: 100vh;
+  background-color: red;
+}*/
+
+/*login form*/
+
+
+#home-icon {
+	font-size: 150px;
+}
+
+.login-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.login-form-1{
+    padding: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-1 h3{
+    text-align: center;
+    color: #333;
+}
+.login-form-2{
+    padding: 5%;
+    background: #0062cc;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-2 h1, h3{
+    text-align: center;
+    color: #fff;
+}
+.login-container form{
+    padding: 10%;
+}
+.btnSubmit
+{
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}
+.login-form-1 .btnSubmit{
+    font-weight: 600;
+    color: #fff;
+    background-color: #0062cc;
+}
+
+.login-form-1 input[type=text]{
+    border:none;
+}
+
