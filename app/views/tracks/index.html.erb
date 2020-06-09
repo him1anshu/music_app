@@ -1,6 +1,6 @@
 <% if current_user %>
 
-  <%= render 'tracks/home', track: @tracks %><!-- 
+	<%= render 'tracks/home', track: @tracks %><!-- 
   <%= form_tag root_path, :method => 'get' do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
@@ -8,7 +8,6 @@
   </p>
   <% end %> -->
   
-  <br><br><br><br><br><br><br><br><br><br><br><br>
 <% else %>
   
      <%= render "login" %>

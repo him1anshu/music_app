@@ -1,10 +1,6 @@
-<%= render 'tracks/header'%>
-
 <section class="container-fluid">
 
-<div class="container-fluid">
-
-<h4 class=" m-0 ml-4 mt-4">TRACKS</h4>
+<h4 class=" m-0 ml-4">TRACKS</h4>
 
 <% @tracks.each do |track| %>
 
@@ -22,8 +18,9 @@
 <div class="container-fluid">
 
 <h4 class=" m-0 ml-4 mt-4 float-left">ALBUMS</h4>
+
 <% if current_user.admin? %>
-<%= link_to "Edit", albums_path , class: "btn btn-primary float-right m-0 mt-4 mr-5" %>
+<%= link_to "Edit", albums_path , class: "btn btn-success float-right m-0 mt-4 mr-5" %>
 <%end%>
 
 </div>
@@ -41,8 +38,4 @@
 
 </div>
 
-</div>
-
 </section>
-
-<%= render 'tracks/footer'%>

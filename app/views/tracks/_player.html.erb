@@ -1,0 +1,53 @@
+<section id="music" class="container-fluid navbar fixed-bottom m-0 p-0" data-turbolinks-permanent>
+
+<div id="music-player" class="text-center">
+<div class="row">
+
+<div class="col-12">
+<div id="seek-bar" class="progress col-12 m-0 p-0">
+<div class="progress-bar progress-bar-striped bg-primary progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="row m-0 p-0">
+
+<div class="col-12 m-0 p-0 py-2">
+
+<audio preload="none" id="player" class="m-0 p-0">
+<source id="ogg_src" src="" type="audio/ogg" />
+<source id="mp3_src" src="" type="audio/mp3" />
+</audio>
+
+<span id="timer" class="col-1 m-0 p-0">00:00/00:00</span>
+
+<button class="col-1 btn" type="button"><i id="backward" class="fas fa-fast-backward fa-lg"></i></button>
+
+<button class="col-1 btn" type="button"><i id="prev" class="fas fa-backward fa-lg"></i></button>
+
+<!-- <i id="stop" class="col-1 fas fa-stop fa-lg text-light"></i> -->
+
+<button id="play" class="col-1 btn first" type="button"><i class="fas fa-play fa-lg"></i></button>
+
+<button id="pause" class="col-1 btn second" type="button"><i class="fas fa-pause fa-lg"></i></button>
+
+<button class="col-1 btn" type="button"><i id="next" class="fas fa-forward fa-lg"></i></button>
+
+<button class="col-1 btn" type="button"><i id="forward" class="fas fa-fast-forward fa-lg"></i></button>
+
+<span class="col-5 slidecontainer">
+<button id="mute" class="btn  m-0 p-0 mute-first" type="button"><i class="fas fa-volume-up fa-lg"></i></button>
+
+<button id="unmute" class="btn  m-0 p-0 mute-second" type="button"><i class="fas fa-volume-mute fa-lg"></i></button>
+<input type="range" min="0" max="100" value="50" class="slider" id="myRange">
+</span>
+
+</div>
+
+
+</div>
+</div>
+
+</section>

@@ -4,6 +4,6 @@
 
 <%= render 'tracks/form', track: track %>
 
-<p><%= link_to "Delete Track", album_track_path(@album, track), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+<p class="btn btn-danger m-0 ml-4 mt-3"><%= link_to "Delete Track", album_track_path(@album, track), method: :delete, data: { confirm: 'Are you sure?' } %></p>
 
 <hr>

@@ -3,8 +3,15 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 * {
-	font-family: 'proximanova-semibold-webfont';
-	color: rgba(0,0,0,0.75);
+	/*font-family: 'proximanova-semibold-webfont';*/
+  /*font-family: Arial, Helvetica, sans-serif;*/
+	/*color: #fff;*/
+  /*color: rgba(0,0,0,0.7);*/
+  font-family: "DM Sans",sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #1b1642;
 }
 
 body {
@@ -17,18 +24,20 @@ a, a:hover, a:focus, a:active {
 }
 
 #nav-bar {
-  background-color: #1d2b36;
+  /*background-color: #1d2b36;*/
+  background-color: #0a081f;
+  /*border-bottom: 1px solid #fff;*/
 }
 
 .search-field {
-  background-color: #1d2b36;
+  background-color: transparent;
   border: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid lightgreen;
   border-radius: 0;
 }
 
 .search-button {
-  background-color: #1d2b36;
+  background-color: transparent;
   border: none;
 }
 
@@ -43,28 +52,70 @@ a, a:hover, a:focus, a:active {
 #music-player {
   height:55px;
   width: 100%;
+ background-color: #0a081f;
+}
+
+#timer {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+/*#music-player button{
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%; 
+  display: inline-block;
+}*/
+
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 2px;
+    background: lightgreen;
+    border: none;
+    border-radius: 3px;
+    margin-top: -9px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -6px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #fff;
+}
+
+#music-player button i, span {
+  /*color: #e6e6e6;*/
+  color: lightgreen;
+}
+
+.second, .mute-second {
+  display: none;
 }
 
 #seek-bar {
   cursor: pointer;
-  height: 5px; 
+  height: 3px; 
   border-radius: 0;
 }
 
 #music-player i, input{
   cursor: pointer;
 }
-
-/*.left {
-  height: 100vh;
-  background-color: grey;
-}
-
-.right {
-  
-  height: 100vh;
-  background-color: red;
-}*/
 
 /*login form*/
 
@@ -74,8 +125,8 @@ a, a:hover, a:focus, a:active {
 }
 
 .login-container{
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 2%;
+    margin-bottom: 0;
 }
 .login-form-1{
     padding: 5%;

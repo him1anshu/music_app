@@ -13,8 +13,6 @@
   <h2 class="m-0 ml-4 my-2">Tracks in <%= @album.name %> : </h2>
   <%= render @album.tracks %>
 <% end %>
-  
-<hr>
 
 <h2 class="m-0 ml-4 my-2">Add a track : </h2>
 <%= render 'tracks/form', track: @album.tracks.build  %>

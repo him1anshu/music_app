@@ -17,8 +17,8 @@
         <td><%= album.name %></td>
         <td><%= album.description %></td>
         <td class="p-0 pt-1"><%= link_to 'Show', album, class: "btn btn-dark m-0" %></td>
-        <td class="p-0 pt-1"><%= link_to 'Edit', edit_album_path(album), class: "btn btn-dark m-0" %></td>
-        <td class="p-0 pt-1"><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-dark m-0" %></td>
+        <td class="p-0 pt-1"><%= link_to 'Edit', edit_album_path(album), class: "btn btn-primary m-0" %></td>
+        <td class="p-0 pt-1"><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger m-0" %></td>
       </tr>
     <% end %>
   </tbody>

@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>MusicApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'bootstrap.min' %>
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.13.0/css/all.css"> 
-    
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.13.0/css/all.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-  </head>
-
-  <body style="background-color: #efefef;">
-
-    <p class="notice alert-info"><%= notice %></p>
-    <p class="alert alert-error"><%= alert %></p>
-
-    <%= yield %>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <%= render 'tracks/header'%>
+    <%= render 'tracks/player'%>
     <%= javascript_pack_tag :player%>
-  </body>
+</head>
+
+<body style="background-color: #f3f8ff;/*background-color: #efefef;*/ /*background-color: #0e0e0e;*/ margin-top: 4%; margin-bottom: 300px;">
+    <p class="notice alert-info">
+        <%= notice %>
+    </p>
+    <p class="alert alert-error">
+        <%= alert %>
+    </p>
+    <%= yield %>
+</body>
+
 </html>

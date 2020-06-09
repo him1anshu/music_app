@@ -1,4 +1,4 @@
-  <div class="container-fluid">
+  <div class="container-fluid" data-turbolinks-permanent>
   
   <nav id="nav-bar" class="navbar navbar-expand-lg navbar-dark fixed-top test">
 
@@ -16,20 +16,25 @@
         </i><%= link_to "Home" , root_path, class: "nav-link"%>
       </li>
       
-      <li class="nav-item">
-      <a class="nav-link disabled text-light" href="#">Signed in as : <%= current_user.email.split('@')[0].capitalize%></a>
-      </li>
-
-      <li class="nav-item">
-         <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, :class => "nav-link" %>
-      </li>
+       <% if current_user %>
+        <li class="nav-item">
+          <a class="nav-link disabled text-light" href="#">Signed in as : <%= current_user.email.split('@')[0].capitalize %></a>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, :class => "nav-link" %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <a class="nav-link disabled text-light" href="#">Please Sign In</a>
+        </li>
+      <% end %>
 
     </ul>
 
     <form class="form-inline my-2 my-lg-0">
       
       <input class="form-control mr-sm-2 search-field" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-danger my-2 my-sm-0 search-button" type="submit"><i class="fas fa-search fa-lg text-light"></i></button>
+      <button class="btn btn-outline-danger my-2 my-sm-0 search-button" type="submit"><i class="fas fa-search fa-sm text-light"></i></button>
 
     </form>
   
